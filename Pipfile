@@ -8,6 +8,7 @@ django = "*"
 django-ckeditor = "*"
 pillow = "*"
 mysql-connector-python = "*"
+dj-static = "*"
 
 [dev-packages]
 

@@ -131,7 +131,7 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = '/home/mbfzambia/public_html/jacktemboBlog'
+STATIC_ROOT = BASE_DIR/'static'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR/'media'
 
@@ -147,3 +147,6 @@ CKEDITOR_CONFIGS = {
     },
 }
 
+STATICFILES_DIRS = [
+    '/home/mbfzambia/Blog/staticfiles',
+]
