@@ -9,6 +9,7 @@ django-ckeditor = "*"
 pillow = "*"
 mysql-connector-python = "*"
 dj-static = "*"
+whitenoise = "*"
 
 [dev-packages]
 
