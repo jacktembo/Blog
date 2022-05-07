@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,12 +76,24 @@ WSGI_APPLICATION = 'Blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
+dev_db = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
     }
 }
+prod_db = {
+    'default': {
+        'NAME': 'mbfzambia_jacktembo_blog',
+        'ENGINE': 'mysql.connector.django',
+        'USER': 'mbfzambia_root',
+        'PASSWORD': 'MagicBrains2022!',
+        'OPTIONS': {
+          'autocommit': True,
+        },
+    }
+}
+DATABASES = prod_db
 
 
 # Password validation
